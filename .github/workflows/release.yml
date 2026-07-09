@@ -19,12 +19,6 @@ jobs:
       - name: Build binaries
         run: make build_linux_amd64
 
-      - name: Upload Linux AMD64
-        uses: shogo82148/actions-upload-release-asset@v1
-        with:
-          upload_url: ${{ github.event.release.upload_url }}
-          asset_path: dist/web-logbook-linux-amd64.tar.gz
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
